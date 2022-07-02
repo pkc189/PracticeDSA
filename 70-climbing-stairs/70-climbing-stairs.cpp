@@ -9,7 +9,7 @@ public:
         int prevTwo = 2;
         int curr = 0;
         for(int i=2;i<n;i++)
-        { //cout<<"h";
+        { 
             curr=prevOne+prevTwo;
             prevOne=prevTwo;
             prevTwo=curr;
