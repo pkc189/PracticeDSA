@@ -1,29 +1,11 @@
 class Solution {
 public:
-    int tribonacci(int n) {
-        
-        if(n>=1 && n<3)
-            return 1;
-        if(n==0)
-            return 0;
-        
-        int prevOne =  0;
-        int prevTwo =  1;
-        int prevThree =1;
-        int curr=0;
-        
-        for(int i=2;i<n;i++)
-        {
-            curr = prevOne+prevTwo+prevThree;
-            
-            
-            prevOne=prevTwo;
-            prevTwo=prevThree;
-            prevThree=curr;
-            
+     int tribonacci(int n) {
+        if (n < 2) return n;
+        int a = 0, b = 1, c = 1, d = a + b + c;
+        while (n-- > 2) {
+            d = a + b + c, a = b, b = c, c = d;
         }
-        
-        
-      return curr;  
+        return c;
     }
 };
