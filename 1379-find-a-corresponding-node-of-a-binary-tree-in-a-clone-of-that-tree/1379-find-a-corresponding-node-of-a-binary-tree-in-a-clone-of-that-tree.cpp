@@ -9,38 +9,30 @@
  */
 
 class Solution {
-public:
-    TreeNode* getTargetCopy(TreeNode* original, TreeNode* cloned, TreeNode* target)     {
-        
-       return traverse(cloned,target);
-        
-        
+  public:
+    TreeNode * getTargetCopy(TreeNode * original, TreeNode * cloned, TreeNode * target) {
+
+      return traverse(cloned, target);
+
     }
-    
-    TreeNode* traverse(TreeNode* cloned,TreeNode*target)
-    { 
-        
-        if(target ==NULL)
-            return NULL;
-        if(cloned==NULL)
-            return NULL;
-        
-      //  cout<<target->val<<","<<cloned->val<<endl;
-          if(target->val==cloned->val)
-            {
-            //  cout<<"h";
-              
-              return cloned;}
-     
-        
-        
-      TreeNode* right =   traverse(cloned->right,target) ;
-   TreeNode*left =   traverse(cloned->left,target);
-        
-       return right?right:left;
-        
+
+  TreeNode * traverse(TreeNode * cloned, TreeNode * target) {
+
+    if (target == NULL)
+      return NULL;
+    if (cloned == NULL)
+      return NULL;
+
+    if (target -> val == cloned -> val) {
+
+      return cloned;
     }
-    
-    
-    
+
+    TreeNode * right = traverse(cloned -> right, target);
+    TreeNode * left = traverse(cloned -> left, target);
+
+    return right ? right : left;
+
+  }
+
 };
