@@ -17,10 +17,16 @@ public:
         
         if(root->val==val)
             return root;
-      TreeNode* left =   searchBST(root->left,val);
-         TreeNode* right =    searchBST(root->right,val);
-      //  cout<<"hello";
-        return left?left:right;
         
+        if( root->val>val)
+            return searchBST(root->left,val);
+        else
+        
+        
+      
+        return  searchBST(root->right,val);
+       
+    //    return left?left:right;
+   
     }
 };
