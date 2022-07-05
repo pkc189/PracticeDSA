@@ -1,6 +1,9 @@
 class Solution {
 public:
     string firstPalindrome(vector<string>& words) {
+       ios_base::sync_with_stdio(false);
+        cout.tie(NULL);
+        cin.tie(NULL);
         
         for(auto a:words)
         {
