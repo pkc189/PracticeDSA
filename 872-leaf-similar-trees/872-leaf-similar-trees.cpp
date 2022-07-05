@@ -12,30 +12,21 @@
 class Solution {
 public:
     bool leafSimilar(TreeNode* root1, TreeNode* root2) {
-        queue<int> q;
-         queue<int> q1;
+        string q;
+         string q1;
         left(root1,q);
         
          right(root2,q1);
       
-   while(!q.empty())
-   { //cout<<q.front()<<q1.front()<<endl;
-       if(q.front()!=q1.front())
-       { 
-           return false;
-       }
-       
-       q.pop();
-       q1.pop();
-   }
+  
+        
+        cout<<q<<endl<<q1;
         
         
-        
-        
-         return q.empty() && q1.empty();   
+         return q==q1;   
     }
     
-   void left(TreeNode* root,queue<int>&q)
+   void left(TreeNode* root, string &q)
     {
        
             if(root==NULL)
@@ -43,7 +34,7 @@ public:
        
           if(root->left==NULL and root->right==NULL)
         { 
-            q.push(root->val);
+            q+=to_string(root->val)+',';
              // cout<<q.front();
         }
         
@@ -57,7 +48,7 @@ public:
         
     }
     
-   void  right(TreeNode* root,queue<int>&q)
+   void  right(TreeNode* root,string &q)
     {
           // cout<<"root";
         if(root==NULL)
@@ -65,7 +56,7 @@ public:
        
         
           if(root->left==NULL and root->right==NULL)
-        {   q.push(root->val);
+        {  q+=to_string(root->val)+',';
         }
      
         
