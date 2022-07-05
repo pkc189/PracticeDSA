@@ -28,8 +28,7 @@
      traverse(root -> left, binary, sum);
 
      traverse(root -> right, binary, sum);
-     // if(binary.size()>2)
-
+ 
      binary.pop_back();
 
    }
