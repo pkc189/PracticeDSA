@@ -21,10 +21,10 @@ public:
         
         if(size1<size2)
         {
-            res+=word2.substr(i,max(size1,size2));
+            res+=word2.substr(i);
         }
         else{
-             res+=word1.substr(i,max(size1,size2));
+             res+=word1.substr(i);
         }
         
         return res;
