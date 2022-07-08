@@ -5,7 +5,8 @@ public:
         int res = 0;
         while(num) {
             res += (num & 1) ? 2 : 1;
-            num >>= 1;
+            num/=2;
+           // num >>= 1;
         }
         return res - 1;
     }
