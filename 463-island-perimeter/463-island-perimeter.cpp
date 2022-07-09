@@ -13,10 +13,14 @@ public:
                         repeat++;
                     if(j!=0 && grid[i][j-1]==1)
                         repeat++;
+                       if(i<grid.size()-1 && grid[i+1][j]==1)
+                        repeat++;
+                    if(j<grid[i].size()-1 && grid[i][j+1]==1)
+                        repeat++;
                 }
             }
         }
         
-       return 4*count-2*repeat; 
+       return 4*count-repeat; 
     }
 };
