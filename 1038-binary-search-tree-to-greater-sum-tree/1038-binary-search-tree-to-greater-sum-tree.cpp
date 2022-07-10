@@ -20,7 +20,7 @@ public:
             bstToGst(root->right);
         
          root->val = pre+root->val;
-        pre =root->val;
+         pre =root->val;
         if(root->left)
             bstToGst(root->left);
         return root;
