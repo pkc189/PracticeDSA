@@ -19,8 +19,8 @@ public:
         if(root->right)
             bstToGst(root->right);
         
-        pre = root->val = pre+root->val;
-        
+         root->val = pre+root->val;
+        pre =root->val;
         if(root->left)
             bstToGst(root->left);
         return root;
