@@ -21,19 +21,20 @@ public:
 class Solution {
 public:
     int maxDepth(Node* root) {
+        
+        int height =0;
         if(root==NULL)
             return 0;
         
-        int count=0;
-        
-        for(auto child:root->children)
+        for(auto a:root->children)
         {
-            int x = maxDepth(child);
-            count = max(count,x);
+            int c = maxDepth(a);
+            
+            height=max(height,c);
+            
         }
-       
         
-      return count+1;  
-        
+        height++;
+        return height;
     }
 };
