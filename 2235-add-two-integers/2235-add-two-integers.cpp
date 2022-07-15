@@ -1,22 +1,16 @@
 class Solution {
 public:
-    int sum(int x, int y) {
-        while (y != 0)
-    {
-        // carry should be unsigned to
-        // deal with -ve numbers
-        // carry now contains common
-        //set bits of x and y
-        unsigned carry = x & y;
- 
-        // Sum of bits of x and y where at
-        //least one of the bits is not set
-        x = x ^ y;
- 
-        // Carry is shifted by one so that adding
-        // it to x gives the required sum
-        y = carry << 1;
-    }
-      return x;  
+    int sum(int num1, int num2) {
+        vector<int>v={num1,num2};
+        vector<int>prefix(3,0);
+        
+        for(int i=0;i<v.size();i++)
+        {
+           prefix[i+1] = prefix[i]+v[i];
+        }
+        
+        
+        
+       return prefix[v.size()]; 
     }
 };
