@@ -5,6 +5,6 @@ public:
         for(int a:n)
             x = max(x,a);
         
-        return x-48;
+        return x-'0';
     }
 };
