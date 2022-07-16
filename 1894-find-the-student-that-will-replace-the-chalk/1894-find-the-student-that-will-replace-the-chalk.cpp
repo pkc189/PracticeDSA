@@ -14,7 +14,7 @@ public:
         
         long long rem = k%sum;
         
-        for(int i=0;i<n;i++)
+        for(int i=0;i<n;++i)
         {
             rem = rem -chalk[i];
             
