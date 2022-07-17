@@ -49,7 +49,7 @@ public:
             
             if(it !=root->leaves.end() )
             {
-                root=it->second;
+                root=root->leaves[a];
             }
             else
                 break;
