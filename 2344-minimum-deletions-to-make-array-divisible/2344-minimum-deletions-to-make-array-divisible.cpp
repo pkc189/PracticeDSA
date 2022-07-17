@@ -2,41 +2,29 @@ class Solution {
 public:
     int minOperations(vector<int>& nums, vector<int>& numsDivide) {
         
-        map<int,int>map;
+        int g=numsDivide[0];
+        
+        for(auto a:numsDivide)
+            g=gcd(g,a);
+        
         sort(nums.begin(),nums.end());
-        for(auto a:nums)
+    
+        
+        for(int i=0;i<nums.size();i++)
         {
-            map[a]++;
+            
+            
+            if(g%nums[i]==0)
+            {
+                cout<<nums[i];
+                  return i;
+            }
+              
         }
         
-        int sum=0;
-        for(auto a:map)
-        {
-            int x = a.first;
-            
-        bool flag = true;
-            for(auto b:numsDivide)
-            {
-                if(b%x!=0)
-                {flag=false;
-                      cout<<x<<"->"<<a.second<<endl;
-                    sum+=a.second;
-                    break;
-                }
-            }
-            if(flag)
-            {
-                break;
-            }
-            
-        }
-        cout<<endl;
         
- 
-        if(sum==nums.size())
-            return -1;
         
-        return sum;
+        return -1;
         
         
     }
