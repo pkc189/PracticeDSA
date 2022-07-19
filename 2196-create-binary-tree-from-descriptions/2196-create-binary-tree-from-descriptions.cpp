@@ -66,8 +66,8 @@ public:
         {
             if(it.second==true)
             {
-                root=storeAllNode[it.first];
-                break;
+                return storeAllNode[it.first];
+              
             }
         }
         return root;  
