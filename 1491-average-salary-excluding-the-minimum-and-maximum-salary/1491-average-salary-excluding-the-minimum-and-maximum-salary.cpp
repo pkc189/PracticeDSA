@@ -1,13 +1,19 @@
 class Solution {
 public:
     double average(vector<int>& salary) {
-        int min = *min_element(salary.begin(),salary.end());
-        int max = *max_element(salary.begin(),salary.end());
+        int minm = INT_MAX;
+        int maxm = INT_MIN;
         
-        double sum = accumulate(salary.begin(),salary.end(),0);
+        double sum = 0.0;
         
-        
-        sum = sum-(min+max);
+        for(auto a:salary)
+        {
+            minm = min(a,minm);
+            maxm = max(a,maxm);
+            sum+=a;
+        }
+       
+        sum = sum-(minm+maxm);
         
         return sum/(salary.size()-2);
         
