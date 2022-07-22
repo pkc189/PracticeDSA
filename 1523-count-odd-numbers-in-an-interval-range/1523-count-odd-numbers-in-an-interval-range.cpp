@@ -3,8 +3,8 @@ public:
     int countOdds(int low, int high) {
         int count=0;
         
-         if(low%2==0)
-             if(high%2==0)
+         if(!(low&1))
+             if(!(high&1))
              {return (high-low)/2;}
         
         return (high-low)/2+1;
