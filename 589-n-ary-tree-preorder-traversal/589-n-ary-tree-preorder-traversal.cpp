@@ -23,23 +23,50 @@ public:
     vector<int> preorder(Node* root) {
         vector<int>res;
         
+        stack<Node*>s;
+  
         if(root==NULL)
             return res;
         
-        preOrder(root,res);
+        
+        
+        s.push(root);
+        
+        
+        while(!s.empty())
+        {
+            auto a = s.top();
+            s.pop();
+           
+                res.push_back(a->val);
+            vector<Node*>v;
+            for(auto children:a->children)
+                v.push_back(children);
+         
+            reverse(v.begin(),v.end());
+            
+           for(auto a:v)
+               s.push(a);
+            
+            
+        }
+        
+        
+        
+       // preOrder(root,res);
         
         return res;
         
     }
     
-   void preOrder(Node* root,vector<int>&res) 
-   {
-       res.push_back(root->val);
+//    void preOrder(Node* root,vector<int>&res) 
+//    {
+//        res.push_back(root->val);
        
-       for(auto a:root->children)
-       preOrder(a,res);
+//        for(auto a:root->children)
+//        preOrder(a,res);
        
-   }
+//    }
     
     
 };
