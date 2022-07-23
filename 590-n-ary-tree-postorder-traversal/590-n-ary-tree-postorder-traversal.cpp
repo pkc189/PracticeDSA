@@ -36,11 +36,11 @@ public:
             
             s.pop();
             
-            v.push_back(a->val);
+         
             
         for(auto b:a->children)
             s.push(b);
-                
+                  v.push_back(a->val); 
         }
         reverse(v.begin(),v.end());
         return v;
