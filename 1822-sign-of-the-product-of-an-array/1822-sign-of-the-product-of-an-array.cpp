@@ -12,7 +12,7 @@ public:
         for(auto a:nums)
           { 
             if(a<0)
-            mul = mul*-1;
+            mul = - mul;
             
             
            if(a==0)
