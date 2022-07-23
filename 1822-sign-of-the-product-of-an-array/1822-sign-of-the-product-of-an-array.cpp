@@ -8,7 +8,7 @@ public:
       
   
         
-       int mul=1;
+       char mul=1;
         for(auto a:nums)
           { 
             if(a<0)
