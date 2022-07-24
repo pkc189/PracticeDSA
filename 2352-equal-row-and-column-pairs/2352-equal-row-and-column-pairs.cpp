@@ -4,28 +4,29 @@ public:
         
         int count=0;
         
+       map<vector<int>,int>map;
+        
          for(auto a:grid)
         {
-            vector<int>v1,v2;
+             map[a]++;
+             
+         }
+        
+        
+         
             for(int i=0;i<grid.size();i++)
-            {  
+            {     vector<int>v;
                 for(int j=0;j<grid.size();j++)
                 {
-                    v1.push_back(grid[j][i]);
-                   // v2.push_back(grid[i][j]);
+                    v.push_back(grid[j][i]);
+                  
                 }
-                if(a==v1)
-                {
-                    count++;
-                    
-                }
-                v1.clear();
-               // v2.clear();
-                    
+              count+=map[v];
+              
+          
             }
             
-        }
-        
+   
         
         return count;
         
