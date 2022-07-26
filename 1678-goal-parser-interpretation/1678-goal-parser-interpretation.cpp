@@ -1,33 +1,16 @@
 class Solution {
 public:
-    string interpret(string c) {
-        
-        if(c.size()==1)
-            return c;
-        
-        
-        string ans="";
-        if(c[0]=='G')
-            ans+="G";
-        
-        for(int i=1;i<c.size();i++)
+    string interpret(string command) {
+       string s;
+        for(int i=0;i<command.length();i++)
         {
-             
-            
-            if(c[i-1]=='('&&c[i]==')')
-            {
-                ans+="o";
-            }
-            else if(c[i-1]=='('&&c[i]=='a')
-            {
-                ans+="al";
-            }
-            if( c[i]=='G')
-            {
-               ans+="G"; 
-            }
-            
+            if(command[i]=='(' && command[i+1]==')')
+                s+="o";
+             if(command[i]=='a' && command[i+1]=='l')
+                s+="al";
+            if(command[i]=='G')
+                s+='G';
         }
-       return ans; 
+        return s;  
     }
 };
