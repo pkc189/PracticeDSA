@@ -1,30 +1,15 @@
 class Solution {
 public:
     char findTheDifference(string s, string t) {
-        if(s.size()==0)
-            return t[0];
         
-    unordered_map<char,int>v;
-    
+        char c=0;
+        
         for(auto a:t)
-        {
-            
-            v[a]++;
-            
-        }
-        char ans=' ';
-      
-        for(auto a:s)
-        {
-           v[a]--;
-        }
-        for(auto a:v)
-         
-        {
-            if(a.second==1)
-                return a.first;
-        }
+            c=c^a;
         
-       return ans;
+         for(auto a:s)
+            c=c^a;
+        
+        return c;
     }
 };
