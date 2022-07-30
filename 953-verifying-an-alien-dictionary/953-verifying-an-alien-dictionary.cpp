@@ -13,8 +13,7 @@ public:
          {   for (char &c : w)
                 {c = mapping[c - 'a'];}}
        
-       for(auto a:words)
-           cout<<a<<endl;
+      
        
        
         return is_sorted(words.begin(), words.end());
