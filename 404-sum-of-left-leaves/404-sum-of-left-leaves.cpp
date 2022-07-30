@@ -33,7 +33,7 @@ public:
         
   { 
         
-    if(isLeaf(root->left))
+    if (root->left && root->left->left == NULL && root->left->right == NULL)
         count+= root->left->val;
       
      
