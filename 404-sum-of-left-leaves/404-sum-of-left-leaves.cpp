@@ -12,17 +12,8 @@
 class Solution {
 public:
 
-    
-    bool isLeaf(TreeNode *node)
-{
-   if (node == NULL)
-       return false;
-   if (node->left == NULL && node->right == NULL)
-       return true;
-   return false;
-}
-    
-         int count=0;
+     
+   int count=0;
     int sumOfLeftLeaves(TreeNode* root) {
         
        
@@ -31,7 +22,7 @@ public:
             return 0;
           
         
-  { 
+   
         
     if (root->left && root->left->left == NULL && root->left->right == NULL)
         count+= root->left->val;
@@ -42,7 +33,7 @@ public:
       sumOfLeftLeaves(root->right);
      
           
-   }
+   
   
         
         return count ;
