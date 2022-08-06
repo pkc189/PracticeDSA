@@ -6,11 +6,11 @@ public:
         int count=0;
         while(dec)
         {
-            int rem = dec%2;
-            if(rem==1)
-                count++;
+            count+= dec&1;
             
-            dec = dec/2;
+             dec =  dec>>1;
+            
+          
             
         }
         
