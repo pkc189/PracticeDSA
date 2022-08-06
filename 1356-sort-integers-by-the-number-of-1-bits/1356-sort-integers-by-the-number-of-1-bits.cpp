@@ -1,14 +1,7 @@
 class Solution {
 public:
-   static  bool cmp(pair<int,int>&a,pair<int,int>&b)
-        {
-       
-       
-          if(a.second==b.second)
-              return a.first<b.first;
-            return a.second<b.second;
-        }
-   int countOnes(int dec)
+  
+   static int countOnes(int dec)
     {
         int count=0;
         while(dec)
@@ -24,27 +17,27 @@ public:
         return count;
     }
     
+    
+     static  bool cmp(int a,int b)
+        {
+        int x = countOnes(a);
+        int y = countOnes(b);
+         
+       
+          if(x==y)
+              return a<=b;
+            return x<y;
+        }
+    
+    
     vector<int> sortByBits(vector<int>& arr) {
       
-        vector<pair<int,int>>map;
-        
-        for(auto a:arr)
-        {
-            map.push_back(make_pair(a,countOnes(a)));
-        }
-        
-    
-        
-        
+     
+        sort(arr.begin(),arr.end(),cmp);
+      
        
-            sort(map.begin(),map.end(),cmp);
-        vector<int>v;
-        for(auto a:map)
-        {
-           v.push_back(a.first);
-        }
         
-        return v;
+        return arr;
         
         
     }
