@@ -1,33 +1,21 @@
 class SeatManager {
 public:
     
-    set<int>p;
-    int curr;
-        
+    priority_queue<int,vector<int>,greater<int>>p;
+    
     SeatManager(int n) {
-        curr=1;
+        for(int i=1;i<=n;i++)
+            p.push(i);
     }
     
     int reserve() {
-        
-        if(p.size())
-        {
-            int a = *p.begin();
-          p.erase(a); 
-            return a;
-        }
-        else{
-            curr++;
-            return curr-1;
-        }
-        
+        int a = p.top();
+        p.pop();
+        return a;
     }
     
     void unreserve(int seatNumber) {
-        if(curr>=seatNumber)
-        
-        p.insert(seatNumber);
-        
+        p.push(seatNumber);
     }
 };
 
