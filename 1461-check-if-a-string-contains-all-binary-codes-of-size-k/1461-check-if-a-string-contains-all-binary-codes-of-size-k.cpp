@@ -15,7 +15,7 @@ public:
         
         //cout<<st.size();
         
-        return n==st.size();
+        return st.size()==1<<k;
         
         
     }
