@@ -25,7 +25,7 @@ class Solution
         temp.push_back(c[i]);
         solve(i,temp,c,t-c[i]);
         
-      //  temp.pop_back();
+       temp.pop_back();
         
         
         
