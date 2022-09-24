@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minStoneSum(vector<int>& piles, int k) {
-        sort(piles.begin(),piles.end(),greater<int>());
+        
         int sum=0;
         
         priority_queue<int>pq;
