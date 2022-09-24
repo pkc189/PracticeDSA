@@ -4,12 +4,8 @@ public:
         
         int sum=0;
         
-        priority_queue<int>pq;
-        
-        for(auto a:piles)
-        {
-           pq.push(a);
-        }
+        priority_queue<int>pq(piles.begin(),piles.end());
+    
         
        
         while(k--)
