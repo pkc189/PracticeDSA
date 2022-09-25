@@ -11,7 +11,7 @@ class Solution
 
         vector<vector < int>> merge(vector<vector < int>> &intv)
         {
-            sort(intv.begin(), intv.end(), cmp);
+            sort(intv.begin(), intv.end());
             vector<vector < int>> v;
 
             v.push_back(intv[0]);
