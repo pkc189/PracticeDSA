@@ -48,10 +48,8 @@ class Solution
             
    
             
-for(auto a:v)
-    cout<<a<<endl;
-            
-            cout<<x;
+
+ 
             
             
             // if(v.size()==1)
