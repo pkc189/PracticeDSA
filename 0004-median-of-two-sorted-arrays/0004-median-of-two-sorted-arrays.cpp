@@ -30,6 +30,7 @@ class Solution
 
                 count++;
  
+ 
             }
             
             while(left<nums1.size())
@@ -47,7 +48,6 @@ class Solution
             
             
    
-            
 
  
             
